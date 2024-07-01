@@ -265,6 +265,7 @@ public class SchemaOperator extends AbstractStreamOperator<Event>
                         .toArray());
     }
 
+    // todo review by xuesheng 转换原表名到目标表名
     private Optional<TableId> getRoutedTable(TableId originalTableId) {
         for (Tuple2<Selectors, TableId> route : routes) {
             if (route.f0.isMatch(originalTableId)) {
