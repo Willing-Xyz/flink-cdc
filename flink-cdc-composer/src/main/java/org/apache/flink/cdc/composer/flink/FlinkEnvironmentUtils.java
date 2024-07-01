@@ -45,6 +45,7 @@ public class FlinkEnvironmentUtils {
                     configuration.getOptional(PipelineOptions.JARS).orElse(new ArrayList<>());
             jars.add(jarUrl.toString());
             configuration.set(PipelineOptions.JARS, jars);
+            configuration.setString("classloader.parent-first-patterns.additional", "org.apache.doris");
         } catch (Exception e) {
             throw new RuntimeException("Failed to add JAR to Flink execution environment", e);
         }
