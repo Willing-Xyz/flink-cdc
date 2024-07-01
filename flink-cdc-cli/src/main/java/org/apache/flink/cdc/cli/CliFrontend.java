@@ -53,6 +53,7 @@ public class CliFrontend {
     private static final String FLINK_HOME_ENV_VAR = "FLINK_HOME";
     private static final String FLINK_CDC_HOME_ENV_VAR = "FLINK_CDC_HOME";
 
+    // review by xuesheng 入口方法
     public static void main(String[] args) throws Exception {
         Options cliOptions = CliFrontendOptions.initializeOptions();
         CommandLineParser parser = new DefaultParser();
